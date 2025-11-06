@@ -1,108 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buton Muna & Wakatobi Explore</title>
-  <style>
-    body {margin:0;font-family:'Poppins',sans-serif;background:#f4fcff;color:#033E57;}
-    header {background:#00B8D9;color:white;text-align:center;padding:60px 20px;}
-    header h1 {font-size:2.2em;margin-bottom:10px;}
-    header p {font-size:1.1em;}
-    nav {text-align:right;padding:10px 20px;background:#E0F7FA;}
-    nav button {background:#00ACC1;border:none;color:white;padding:8px 14px;border-radius:20px;margin-left:5px;cursor:pointer;}
-    section {padding:60px 20px;max-width:1000px;margin:auto;}
-    h2 {text-align:center;color:#007F9E;margin-bottom:30px;}
-    .destinations, .culture, .packages {display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
-    .card {background:white;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1);overflow:hidden;}
-    .card img {width:100%;height:200px;object-fit:cover;}
-    .card-content {padding:15px;}
-    .contact {text-align:center;}
-    .whatsapp-float {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50%;font-size:24px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.2);}
-    footer {background:#007F9E;color:white;text-align:center;padding:20px;font-size:0.9em;}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Buton Muna & Wakatobi Explore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <button id="lang-id">ID</button>
-    <button id="lang-en">EN</button>
-  </nav>
-  <header>
-    <h1 data-id="Buton Muna & Wakatobi Explore" data-en="Buton Muna & Wakatobi Explore">Buton Muna & Wakatobi Explore</h1>
-    <p data-id="Jelajahi keindahan alam dan budaya Sulawesi Tenggara bersama kami" data-en="Explore the natural and cultural beauty of Southeast Sulawesi with us">Jelajahi keindahan alam dan budaya Sulawesi Tenggara bersama kami</p>
-  </header>
+<header class="header">
+  <div class="brand"><div class="logo">BM</div><div><strong>Buton Muna & Wakatobi Explore</strong></div></div>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="paket.html">Paket</a>
+    <a href="contact.html">Contact</a>
+    <button class="lang-btn" id="btn-id">ID</button>
+    <button class="lang-btn" id="btn-en">EN</button>
+  </div>
+</header>
 
-  <section id="about">
-    <h2 data-id="Tentang Kami" data-en="About Us">Tentang Kami</h2>
-    <p data-id="Kami adalah agen perjalanan lokal yang berfokus pada wisata alam dan budaya di wilayah Buton, Muna, dan Wakatobi. Kami menyediakan pengalaman wisata laut, darat, dan budaya yang autentik."
-       data-en="We are a local travel agency focused on natural and cultural tourism across Buton, Muna, and Wakatobi. We offer authentic sea, land, and cultural experiences.">Kami adalah agen perjalanan lokal yang berfokus pada wisata alam dan budaya di wilayah Buton, Muna, dan Wakatobi. Kami menyediakan pengalaman wisata laut, darat, dan budaya yang autentik.</p>
-  </section>
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');">
+  <!-- Optional video (commented) -->
+  <!-- <video class="hero-video" autoplay muted loop playsinline src="https://cdn.coverr.co/videos/coverr-tropical-beach-1547?token=eyJhbGciOi..."></video> -->
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="h-kicker" data-trans="kicker">Local Guide • Buton • Muna • Wakatobi</div>
+    <h1 class="h-title" data-trans="title">Jelajahi Buton, Muna & Wakatobi bersama guide lokal</h1>
+    <p class="h-lead" data-trans="lead">Trip laut & darat: snorkeling, diving, trekking, homestay budaya. Santai, aman, berkesan.</p>
+    <div class="cta-group">
+      <a class="btn-primary" href="#packages" data-trans="book">Pesan Sekarang</a>
+      <a class="btn-ghost" href="contact.html" data-trans="contact">Kontak</a>
+    </div>
+  </div>
+</section>
 
-  <section id="destinations">
-    <h2 data-id="Destinasi Unggulan" data-en="Top Destinations">Destinasi Unggulan</h2>
-    <div class="destinations">
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?beach,indonesia" alt="Pantai">
-        <div class="card-content">
-          <h3 data-id="Pantai Nirwana, Buton" data-en="Nirwana Beach, Buton">Pantai Nirwana, Buton</h3>
-          <p data-id="Pasir putih dan air laut biru jernih, sempurna untuk snorkeling dan bersantai." data-en="White sands and clear blue waters, perfect for snorkeling and relaxing.">Pasir putih dan air laut biru jernih, sempurna untuk snorkeling dan bersantai.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?diving,reef" alt="Wakatobi Diving">
-        <div class="card-content">
-          <h3 data-id="Diving di Wakatobi" data-en="Diving in Wakatobi">Diving di Wakatobi</h3>
-          <p data-id="Menjelajahi surga bawah laut dengan terumbu karang terbaik di dunia." data-en="Explore the underwater paradise with some of the world’s best coral reefs.">Menjelajahi surga bawah laut dengan terumbu karang terbaik di dunia.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?culture,indonesia" alt="Budaya Muna">
-        <div class="card-content">
-          <h3 data-id="Budaya Muna" data-en="Muna Culture">Budaya Muna</h3>
-          <p data-id="Nikmati tradisi, musik, dan tarian khas dari pulau Muna." data-en="Enjoy traditional music, crafts, and dances from Muna island.">Nikmati tradisi, musik, dan tarian khas dari pulau Muna.</p>
-        </div>
+<section class="section" id="packages">
+  <h2 style="text-align:center;" data-trans="packages">Paket Wisata</h2>
+  <div class="grid">
+    <div class="card pack">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" alt="paket1">
+      <div class="card-body">
+        <h3 data-trans="pkg1_title">1 Hari Island Hopping</h3>
+        <p data-trans="pkg1_desc">Snorkeling, pantai, makan siang di pulau. Cocok keluarga.</p>
+        <div style="margin-top:10px;font-weight:800" data-trans="pkg1_price">Mulai dari IDR 350.000</div>
+        <div style="margin-top:12px"><button class="btn-primary book-pkg" data-pkg="1 Hari Island Hopping">Pesan Paket Ini</button></div>
       </div>
     </div>
-  </section>
-
-  <section id="packages">
-    <h2 data-id="Paket Wisata" data-en="Tour Packages">Paket Wisata</h2>
-    <div class="packages">
-      <div class="card">
-        <div class="card-content">
-          <h3 data-id="1 Hari Jelajah Buton" data-en="1 Day Buton Tour">1 Hari Jelajah Buton</h3>
-          <p data-id="Kunjungi pantai, benteng, dan spot budaya lokal dalam satu hari." data-en="Visit beaches, forts, and local culture spots in one day.">Kunjungi pantai, benteng, dan spot budaya lokal dalam satu hari.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <h3 data-id="3 Hari 2 Malam Wakatobi Diving" data-en="3D2N Wakatobi Diving">3 Hari 2 Malam Wakatobi Diving</h3>
-          <p data-id="Nikmati pengalaman menyelam dan menjelajahi pulau-pulau eksotis Wakatobi." data-en="Enjoy diving adventures and explore Wakatobi’s exotic islands.">Nikmati pengalaman menyelam dan menjelajahi pulau-pulau eksotis Wakatobi.</p>
-        </div>
+    <div class="card pack">
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop" alt="paket2">
+      <div class="card-body">
+        <h3 data-trans="pkg2_title">3 Hari 2 Malam — Adventure & Budaya</h3>
+        <p data-trans="pkg2_desc">Snorkeling/diving, trekking, homestay budaya.</p>
+        <div style="margin-top:10px;font-weight:800" data-trans="pkg2_price">Mulai dari IDR 1.850.000</div>
+        <div style="margin-top:12px"><button class="btn-primary book-pkg" data-pkg="3D/2N Adventure & Budaya">Pesan Paket Ini</button></div>
       </div>
     </div>
-  </section>
-
-  <section id="contact">
-    <h2 data-id="Kontak Kami" data-en="Contact Us">Kontak Kami</h2>
-    <div class="contact">
-      <p data-id="Hubungi kami untuk informasi dan pemesanan wisata." data-en="Contact us for more information and tour bookings.">Hubungi kami untuk informasi dan pemesanan wisata.</p>
+    <div class="card pack">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="paket3">
+      <div class="card-body">
+        <h3 data-trans="pkg3_title">Diving Trip Eksklusif</h3>
+        <p data-trans="pkg3_desc">Pemandu dive, peralatan, dan akses spot terbaik.</p>
+        <div style="margin-top:10px;font-weight:800" data-trans="pkg3_price">Hubungi untuk harga</div>
+        <div style="margin-top:12px"><button class="btn-primary book-pkg" data-pkg="Diving Trip Eksklusif">Pesan Paket Ini</button></div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <a href="https://wa.me/6282239211302?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20wisata%20Buton%20Muna%20%26%20Wakatobi%20Explore.%20Mohon%20info%20lebih%20lanjut%20ya!" target="_blank" class="whatsapp-float">💬</a>
+<section class="section" id="about">
+  <h2 style="text-align:center;" data-trans="about">Tentang Kami</h2>
+  <div style="max-width:900px;margin:18px auto;text-align:center">
+    <p>Halo, saya <strong>La Ode Ibnu Rajab</strong>, guide lokal dari Buton. Saya mendirikan Buton Muna & Wakatobi Explore untuk membawa traveler merasakan pengalaman otentik — mulai dari laut hingga budaya pulau.</p>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 Buton Muna & Wakatobi Explore. All rights reserved.</p>
-  </footer>
+<section class="section" id="contact">
+  <h2 style="text-align:center;" data-trans="contact">Kontak</h2>
+  <div style="max-width:760px;margin:12px auto;text-align:center">
+    <p>Untuk pemesanan dan info paket, klik tombol WhatsApp di pojok kanan bawah atau gunakan formulir di halaman Contact.</p>
+    <div style="margin-top:14px"><a href="contact.html" class="btn-primary">Buka Halaman Kontak</a></div>
+  </div>
+</section>
 
-  <script>
-    const langId = document.getElementById('lang-id');
-    const langEn = document.getElementById('lang-en');
-    const elements = document.querySelectorAll('[data-id]');
+<footer class="footer">
+  <div data-trans="footer">La Ode Ibnu Rajab — Local Guide & Founder</div>
+</footer>
 
-    langId.onclick = () => elements.forEach(el => el.textContent = el.getAttribute('data-id'));
-    langEn.onclick = () => elements.forEach(el => el.textContent = el.getAttribute('data-en'));
-  </script>
+<a id="wa-btn" class="wa-float" target="_blank">Chat Guide</a>
+
+<script src="script.js"></script>
 </body>
 </html>
